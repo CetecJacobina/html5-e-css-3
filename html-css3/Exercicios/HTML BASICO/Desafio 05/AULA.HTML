@@ -1,0 +1,435 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aula</title>
+<style>
+    body {
+        font-family: open sans;
+        line-height: 1.6;
+        margin: 20px;
+        text-align: justify;
+
+    }
+
+    blockquote {
+        margin: 10px;
+        text-indent: 40px;
+
+    }
+
+    h4 {
+        margin-left: 40px;
+        font-size: 24px;
+        font-weight: bold;
+        color: black;
+        //text-shadow: 0.03em 0.03em 0.03em blue;
+
+        /* Controla a largura do background */
+        display: inline-block;
+        padding: 15px;
+        max-width: calc(200% + 50px);
+        /* Limita a largura do background */
+
+        text-align: left;
+        border-radius: 10px;
+        /* Arredonda os cantos */
+
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 0.1em 0.1em 0.2em black;
+        padding: 20px;
+        text-align: left;
+        border-radius: 10px;
+        /* Arredonda os cantos */
+
+        /* Gradiente no background */
+        background: linear-gradient(to right, blue, #ffffff);
+        /* gradiente do laranja para o rosa */
+    }
+
+    p {
+        //margin: 10px 0;
+        text-indent: 40px;
+    }
+
+    ul {
+        margin: 25px;
+
+        line-height: 1.6;
+
+    }
+</style>
+
+
+
+
+
+<h3>Simbologia para Malhas de Controle</h3>
+<p>A simbologia de instrumentação analógica e digital, compartilhada e integral, distribuída e centralizada se baseia
+    nas seguintes normas americanas (geralmente traduzidas para o português):<br></p>
+<ul>
+    <li><i>ISA S5.1, Instrumentation Symbols and Identification, 1984</i></li>
+    <li><i>ISA S5.3, Graphic Symbols for Distributed Control/Shared Display Instrumentation, Logic and Computer Systems,
+            1983.</i></li>
+</ul>
+<h4>4.4.2 - Aplicações</h4>
+<p>Os símbolos de instrumentação são encontrados principalmente em:</p>
+<ol>
+    <li>Fluxogramas de processo e de engenharia;</li>
+    <li>Desenhos de detalhamento de instrumentação instalação, diagramas de ligação, plantas de localização, diagramas
+        lógicos de controle, listagem de instrumentos;</li>
+    <li>Painéis sinópticos e semigráficos na sala de controle;</li>
+    <li>Diagramas de telas de vídeo de estações de controle.</li>
+</ol>
+<h4>4.4.3 - Roteiro da Identificação</h4>
+<p><b>Geral</b></p>
+<p>Cada instrumento ou função a ser identificada é designado por um conjunto alfanumérico ou número de <b>tag</b>. A
+    parte de identificação da malha correspondente ao número é comum a todos os instrumentos da mesma malha. O tag pode
+    ainda ter sufixo para completar a identificação.</p>
+<p><b>Número de Tag Típico</b><br></p>
+<p><b>TIC 103</b> - Identificação do instrumento ou tag do instrumento.</p>
+<p><b>T 103</b> - Identificação da malha (malha de temperatura, número 103);</p>
+<p><b>TIC</b> - Identificação funcional Controlador Indicador de temperatura;</p>
+<p><b>T</b> - Primeira letra (variável da malha);</p>
+<p><b>IC</b> - Letras subsequentes (função do instrumento na malha).&nbsp;</p>
+<p>O número da malha do instrumento pode incluir o código da informação da área. Por exemplo, o TIC 500-103, TIC
+    500-104, aos dois controladores indicadores de temperatura, ambos da área 500 e os números seqüenciais são 103 e
+    104.</p>
+<p><br></p>
+<p><b>Identificação Funcional</b></p>
+<p>A identificação funcional do instrumento ou seu equivalente funcional consiste de letras e inclui uma primeira letra,
+    que é a variável do processo medida ou de 2.2 inicialização. A primeira letra pode ter um modificador opcional. Por
+    exemplo, <b>PT</b> é o transmissor de pressão e <b>PDT</b> é o transmissor de pressão diferencial.</p>
+<p>A identificação funcional do instrumento é feita de acordo com sua função e não de sua construção. Assim, um
+    transmissor de pressão diferencial para medir nível tem o tag LT (transmissor de nível) e não o de <b>PDT</b>,
+    transmissor de pressão diferencial.</p>
+<p>Embora o transmissor seja construído e realmente meça pressão diferencial, seu tag depende de sua aplicação e por
+    isso pode ser <b>LT</b>, quando mede nível ou <b>FT</b>, quando mede vazão. Outro exemplo, uma chave atuada por
+    pressão ligada à saída de um transmissor pneumático de nível tem tag <b>LS</b>, chave de nível e não <b>PS</b>,
+    chave de pressão.&nbsp;</p>
+<p>O tag também não depende da variável manipulada, mas sempre da variável inicializada ou medida. Assim, uma válvula
+    que manipula a vazão de saída de um tanque para controlar nível, tem tag de <b>LV </b>ou <b>LCV </b>e não de <b>FV
+    </b>ou <b>FnCV</b>.</p>
+<p>A segunda letra tipicamente é a função do instrumento. <b>FT </b>é o tag de um transmissor (<b>T</b>) de vazão
+    (<b>F</b>).</p>
+<p>Também a segunda letra pode ter um ou mais modificadores. <b>FIA </b>é o <b>tag </b>de um indicador de vazão, com
+    alarme. Alarme é o modificador da função indicação. Também pode se detalhar o tipo de alarme, por exemplo, FIAL é o
+    tag de um indicador de vazão com alarme de baixa.</p>
+<p>O tag pode ter modificador da variável (primeira letra) e da função (segunda letra). Por exemplo, <b><abbr
+            title="é um indicador de pressão diferencial">PDIAL </abbr></b>é um indicador de pressão diferencial
+    <i>(modificador de pressão)</i> com alarme <i>(modificador do indicador) </i>de baixa <i>(modificador do
+        alarme).</i></p>
+<p>Quando o tag possuir várias letras, pode-se dividi-lo em dois tags. O instrumento é simbolizado por dois balões se
+    tangenciando e o tag por ser, por exemplo, TIC-3 para o controlador indicador de temperatura e TSH-3 para a chave
+    manual associada ao controlador.</p>
+<p>Todas as letras de identificação de instrumentos são maiúsculas. Por isso, deve-se evitar usar FrC para controlador
+    de relação de vazões e usar FFC, controlador de fração de vazões. As funções de computação (+. -, x, I, ) seleção
+    (&lt;, &gt;), lógica e covnersão (i/p, p/i) deve ter os símbolos ao lado do balão, para esclarecer a função
+    executada.</p>
+<p><br></p>
+<p>Identificação da Malha</p>
+<p>A identificação da malha geralmente é feita por um número, colocado ao final da identificação funcional do
+    instrumento associado a uma variável de processo. A numeração pode ser serial ou paralela.</p>
+<p>Numeração paralela começa de 0 ou para cada variável, TIC-100, FIC-100, LIC-100 e AI-100.&nbsp;</p>
+<p>Numeração serial usa uma única sequência de números, de modo que se tem TIC-100, FIC-101, LIC-102 e AI-103. A
+    numeração pode começar de 1 ou qualquer outro número conveniente, como 101, 1001, 1201.</p>
+<p>Quando a malha tem mais um instrumento com a mesma função, geralmente a função de condicionamento, deve-se usar
+    apêndice ou sufixo ao número.&nbsp;</p>
+<p>Por exemplo, se a mesma malha de vazão tem um extrator de raiz quadrada e um transdutor corrente para pneumático, o
+    primeiro pode ser FY-101-A e o segundo FY-101-B.&nbsp;</p>
+<p>Quando se tem um registrador multiponto, com n pontos, é comum numerar as malhas como TE-18-1, TE-18-2, TE-18-3 até
+    TE-18-n.&nbsp;</p>
+<p>Quando um registrador tem penas dedicadas para vazão, pressão, temperatura, seu tag pode ser FR-2, PR-5 e TR-13. Se
+    ele registra três temperaturas diferentes, seu tag pode ser TR-7/8/9.</p>
+<p><br></p>
+<p>Representação detalhada de uma malha de controle de pressão&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; Representação equivalente</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;simplificada&nbsp;&nbsp;</p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p>Acessórios de instrumentos, como medidores de purga, regulador de pressão, pote de selagem e poço de temperatura, que
+    às vezes nem é mostrado explicitamente no diagrama, precisam ser identificados e ter um tag, de acordo com sua
+    função e deve ter o mesmo número da malha onde é utilizado.&nbsp;</p>
+<p>Esta identificação não implica que o acessório deva ser representado no diagrama. Também pode usar o mesmo tag da
+    malha e colocando-se a palavra de sua função, como SELO, POÇO, FLANGE, PURGA. Há acessório que possui letra
+    correspondente, como W para poço termal. Pode haver diferenças de detalhes de identificação.&nbsp;</p>
+<p>Por exemplo, para a malha Símbolos e Identificação 301 de controle de temperatura, pode-se ter a seguinte
+    identificação:</p>
+<p>TE-301 = sensor de temperatura</p>
+<p>TT – 301 = transmissor de temperatura</p>
+<p>TIC-301 = controlador de temperatura</p>
+<p>TCV-301 = válvula controladora (ou de controle) de temperatura</p>
+<p><br></p>
+<p>Porém, há quem prefira e use:</p>
+<p>TIC-301-E = sensor de temperatura</p>
+<p>TIC – 301-T = transmissor de temperatura</p>
+<p>TIC-301-C = controlador de temperatura</p>
+<p>TIC-301-V = válvula controladora (ou de controle) de temperatura</p>
+<p>Também é possível encontrar em diagramas o tag de TIC ou TC para o controlador de temperatura. Como praticamente todo
+    controlador é também indicador, é comum simplificar e usar TC.</p>
+<p>Alguns projetistas usam pequenas diferenças de tag para distinguir válvulas auto controladas (reguladoras) de
+    válvulas convencionais que recebem o sinal do controlador. Assim, a válvula auto controlada de temperatura tem tag
+    de TCV e a válvula convencional de TV.</p>
+<p><br></p>
+<p>&nbsp;</p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p>Diagrama funcional detalhado típico de uma malha de controle</p>
+<p>&nbsp;</p>
+<p><br></p>
+<h4>4.4.4 - Simbologia de Instrumentos</h4>
+<p>A normalização dos símbolos e identificações dos instrumentos de medição e controle do processo, que inclui símbolos
+    e códigos alfa numéricos, torna possível e mais eficiente a comunicação do pessoal envolvido nas diferentes áreas de
+    uma planta manutenção, operação, projeto e processo.&nbsp;</p>
+<p>Mesmo os não especialistas em instrumentação devem saber a identificação dos instrumentos.</p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Símbolo de modo
+    simplificado</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Simbologia
+    total&nbsp; &nbsp; &nbsp;&nbsp;</p>
+<p><br></p>
+<p>Parâmetros do Símbolo</p>
+<p>A simbologia correta da instrumentação deve conter os seguintes parâmetros:</p>
+<p>1.<span style="white-space:pre"> </span>Identificação das linhas de interligação dos instrumentos, por exemplo:
+    eletrônica física, eletrônica por configuração, pneumática.</p>
+<p>2.<span style="white-space:pre"> </span>Determinação do local de instalação dos instrumentos, acessível ou não
+    acessível ao operador de processo.</p>
+<p>3.<span style="white-space:pre"> </span>Filosofia da instrumentação, quanto ao instrumento ser dedicado a cada malha
+    ou compartilhado por um conjunto de malhas de processo.</p>
+<p>4.<span style="white-space:pre"> </span>Identificação (tag) do instrumento, envolvendo a variável do processo, a
+    função do instrumento e o numero da malha do processo.</p>
+<p>5.<span style="white-space:pre"> </span>Outras informações adicionais.</p>
+<p><br></p>
+<p>Alimentação dos Instrumentos</p>
+<p>A maioria absoluta dos instrumentos de medição e de controle requer alguma fonte de alimentação, que lhe forneça
+    algum tipo de energia para seu funcionamento. Os tipos mais comuns de alimentação são a elétrica e a pneumática,
+    porém há muitas outras disponíveis.</p>
+<p>As seguintes abreviações são sugeridas para denotar os tipos de alimentação. Opcionalmente, elas podem indicar também
+    tipos de purga:</p>
+<p>AS - Suprimento de ar (Air supply),</p>
+<p>ES - Suprimento elétrico (Electric supply),</p>
+<p>GS - Suprimento de gás (Gas supply), HS Suprimento hidráulico, NS Suprimento de Nitrogênio</p>
+<p>SS - Suprimento de vapor (Steam supply)</p>
+<p>WS - Suprimento de água (Water supply)</p>
+<p>O nível de alimentação pode ser adicionado à linha de alimentação do instrumento. Por exemplo:&nbsp;</p>
+<p>AS 100 kPa (alimentação pneumática de 100 kPa), ES 24 V cc (alimentação de 24 V cc para instrumento elétrico).</p>
+<p>Símbolos e Identificação</p>
+<p>&nbsp;</p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p>Miscelânea</p>
+<p>&nbsp;</p>
+<p><br></p>
+<p>Linhas entre os Instrumentos</p>
+<p>As linhas de ligações entre os instrumentos devem ser mais finas que as linhas de processo e são simbolizadas como
+    mostrado a seguir:</p>
+<p><br></p>
+<p>Sinal indefinido: conexão com processo, elo mecânico ou alimentação do instrumento.</p>
+<p>&nbsp; &nbsp; Sinal pneumático, típico de 20 a 100 kPa (3 a 15 psi).</p>
+<p>&nbsp; &nbsp; &nbsp;Sinal eletrônico, típico de 4 a 20 mA oc.</p>
+<p>&nbsp;Sinal de ligação por programação ou ele de comunicação.</p>
+<p>&nbsp;Elo mecânico.</p>
+<p>&nbsp; &nbsp;Sinal eletromagnético ou sônico (guiado).</p>
+<p>&nbsp; &nbsp; Sinal eletromagnético ou sônico (não guiado).</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Sinal hidráulico.</p>
+<p>Tubo capilar.</p>
+<p>Linha de processo.</p>
+<p><br></p>
+<p>Balão do Instrumento</p>
+<p>O instrumento completo é simbolizado por um pequeno balão circular, com diâmetro aproximado de 12 mm. Porém, os
+    avanços nos sistemas de controle com instrumentação aplicando microprocessador, computador digital, que permitem
+    funções compartilhadas em um único instrumento e que utilizam ligações por programação ou por elo de comunicação,
+    fizeram surgir outros símbolos de instrumentos e de interligações.</p>
+<p><br></p>
+<p>Representação dos Instrumentos em Diagrama P&amp;I</p>
+<p>&nbsp;</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p>Válvulas de Controle&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Válvulas
+    Manuais</p>
+<p>&nbsp;</p>
+<p><br></p>
+<p><br></p>
+<p>Notas para a Tabela das Letras de Identificação</p>
+<p>1.<span style="white-space:pre"> </span>Uma letra de escolha do usuário tem o objetivo de cobrir significado não
+    listado que é necessário em uma determinada aplicação. Se usada, a letra pode ter um significado como de primeira
+    letra ou de letras subsequentes. O significado precisa ser definido uma única vez em uma legenda. Por exemplo: a
+    letra N pode ser definida como módulo de elasticidade como uma primeira letra ou como osciloscópio como letra
+    subsequente.</p>
+<p>2.<span style="white-space:pre"> </span>A letra X não classificada tem o objetivo de cobrir significado não listado
+    que será usado somente uma vez ou usado em um significado limitado. Se usada, a letra pode ter qualquer número de
+    significados como primeira letra ou como letra subsequente. O significado da letra X deve ser definido do lado de
+    fora do círculo do diagrama. Por exemplo: XR pode ser registrador de consistência e XX pode ser um osciloscópio de
+    consistência.</p>
+<p>3.<span style="white-space:pre"> </span>A forma gramatical do significado das letras subsequentes pode ser modificado
+    livremente. Por exemplo: I pode significar indicador, ou indicação; T pode significar transmissão ou transmissor.
+</p>
+<p>4.<span style="white-space:pre"> </span>Qualquer primeira letra combinada com as letras modificadoras D
+    (diferencial), F (relação), M (momentâneo), K (tempo de alteração) e Q (integração ou totalização) representa uma
+    variável nova e separada e a combinação é tratada como uma entidade de primeira letra. Assim, os instrumentos TDI e
+    TI indicam duas variáveis diferentes: diferença de temperatura e temperatura. As letras modificadoras são usadas
+    quando aplicável.</p>
+<p>5.<span style="white-space:pre"> </span>A letra A (análise) cobre todas as análises não descritas como uma escolha do
+    usuário. O tipo de análise deve ser especificado fora do circulo de identificação. Por exemplo: análise de pH,
+    análise de O2. Análise é variável de processo e não função de instrumento, como muitos pensam principalmente por
+    causa do uso inadequado do termo analisador.</p>
+<p>6.<span style="white-space:pre"> </span>O uso de U como primeira letra para multivariável em lugar de uma combinação
+    de outras primeiras letras é opcional. É recomendável usar as primeiras letras especificas em lugar da letra U, que
+    deve ser usada apenas quando o número de letras for muito grande. Por exemplo: é preferível usar PR/TR para indicar
+    um registrador de pressão e temperatura em vez de UR. Porém, quando se tem um registrador multiponto, com 24 pontos
+    e muitas variáveis diferentes, deve-se usar UR.</p>
+<p>7.<span style="white-space:pre"> </span>O uso dos termos modificadores alto (H), baixo (L), médio (M) e varredura (J)
+    é opcional.</p>
+<p>8.<span style="white-space:pre"> </span>O termo segurança se aplica a elementos primários e finais de proteção de
+    emergência. Assim, uma válvula auto atuada que evita a operação de um sistema de fluido atingir valores elevados,
+    aliviando o fluido do sistema tem um tag PCV (válvula controladora de pressão). Porém, o tag desta válvula deve ser
+    PSV (válvula de segurança de pressão) se ela protege o sistema contra condições de emergência, ou seja, condições
+    que são perigosas para o pessoal ou o equipamento e que são raras de aparecer. A designação PSV se aplica a todas as
+    válvulas de proteção contra condições de alta pressão de emergência, independente de sua construção, modo de
+    operação, local de montagem, categoria de segurança, válvula de alívio ou de segurança. Um disco de ruptura tem o
+    tag PSE (elemento de segurança de pressão).</p>
+<p>9.<span style="white-space:pre"> </span>A função passiva G se aplica a instrumentos ou equipamentos que fornecem uma
+    indicação não calibrada, como visor de vidro ou monitor de televisão. Costuma-se aplicar TG para termômetro e PG
+    para manômetro, o que não é previsto por esta norma.</p>
+<p>10.<span style="white-space:pre"> </span>A indicação normalmente se aplica a displays analógicos ou digitais de uma
+    medição instantânea. No caso de uma estação manual, a indicação pode ser usada para o dial ou indicador do ajuste.
+</p>
+<p>11.<span style="white-space:pre"> </span>Uma lâmpada piloto que é parte de uma malha de instrumento deve ser
+    designada por uma primeira letra seguida pela letra subsequente L. Por exemplo: uma lâmpada piloto que indica o
+    tempo expirado deve ter o tag KQL (lâmpada de totalização de tempo). A lâmpada para indicar o funcionamento de um
+    motor tem o tag EL (lâmpada de voltagem), pois a voltagem é a variável medida conveniente para indicar a operação do
+    motor ou YL (lâmpada de evento) assumindo que o estado de operação está sendo monitorado. Não se deve usar a letra
+    genérica X, como XL.</p>
+<p>12.<span style="white-space:pre"> </span>O uso da letra U para multifunção vem vez da combinação de outras letras
+    funcionais é opcional. Este designador não específico deve ser usado raramente.</p>
+<p>13.<span style="white-space:pre"> </span>Um dispositivo que liga, desliga ou transfere um ou mais circuitos pode ser
+    uma chave, um relé, um controlador liga-desliga ou uma válvula de controle, dependendo da aplicação. Se o
+    equipamento manipula uma vazão de fluido do processo e não é uma válvula manual de bloqueio liga-desliga, ela é
+    projetada como válvula de controle. É incorreto usar o tag CV para qualquer coisa que não seja uma válvula de
+    controle auto atuada. Para todas as aplicações que não tenham vazão de fluido de processo, o equipamento é projetado
+    como:</p>
+<p>a)<span style="white-space:pre"> </span>Chave se for atuada manualmente.</p>
+<p>b)<span style="white-space:pre"> </span>Chave ou controlador liga-desliga se for automático e for o primeiro
+    dispositivo na malha. O termo chave é geralmente usado se o dispositivo é aplicado para alarme, lâmpada piloto,
+    seleção, intertravamento ou segurança. O termo controlador é usado se o dispositivo é aplicado para o controle de
+    operação normal.</p>
+<p>c)<span style="white-space:pre"> </span>Relé se for automático e não for o primeiro dispositivo na malha, mas atuado
+    por uma chave ou por um&nbsp; &nbsp; &nbsp;controlador liga-desliga.</p>
+<p>14.<span style="white-space:pre"> </span>As funções associadas com o uso de letras subsequentes Y devem ser definidas
+    do lado de fora do circulo de identificação. Por exemplo: FY pode ser o extrator de raiz quadrada na malha de vazão;
+    TY pode ser o conversor corrente para pneumático em uma malha de controle de temperatura. Quando a função é evidente
+    como para uma válvula solenóide ou um conversor corrente para pneumático ou pneumático para corrente a definição
+    pode não ser obrigatória.</p>
+<p>15.<span style="white-space:pre"> </span>Os termos modificadores alto, baixo, médio ou intermediário correspondem aos
+    valores da variável medida e não aos valores do sinal. Por exemplo: um alarme de nível alto proveniente de um
+    transmissor de nível com ação inversa deve ser LAH, mesmo que fisicamente o alarme seja atuado quando o sinal atinge
+    um valor mínimo crítico.</p>
+<p>16.<span style="white-space:pre"> </span>Os termos alto e baixo quando aplicados a posições de válvulas e outras
+    dispositivos de abrir e fechar são assim definidos:</p>
+<p>•<span style="white-space:pre"> </span>Alto significa que a válvula está totalmente aberta;</p>
+<p>•<span style="white-space:pre"> </span>Baixo significa que a válvula está totalmente fechada.</p>
+<p>17.<span style="white-space:pre"> </span>O termo registrador se aplica a qualquer forma de armazenar permanentemente
+    a informação que permita a sua recuperação por qualquer modo.</p>
+<p>18.<span style="white-space:pre"> </span>Elemento sensor, transdutor, transmissor e conversor são dispositivos com
+    funções diferentes, conforme ISA S37.1.</p>
+<p>19.<span style="white-space:pre"> </span>A primeira letra V, vibração ou análise mecânica, destina-se a executar as
+    tarefas em monitoração de máquinas que a letra A executa em uma análise mais geral. Exceto para vibração, é esperado
+    que a variável de interesse seja definida fora das letras de tag.</p>
+<p>20.<span style="white-space:pre"> </span>A primeira letra Y se destina ao uso quando as respostas de controle ou
+    monitoração são acionadas por evento e não acionadas pelo tempo. A letra Y, nesta posição, pode também significar
+    presença ou estado.</p>
+<p>21.<span style="white-space:pre"> </span>A letra modificadora K, em combinação com uma primeira letra como L, T ou W,
+    significa uma variação de taxa de tempo da quantidade medida ou de inicialização. A variável WKIC, por exemplo, pode
+    representar um controlador de taxa de perda de peso.</p>
+<p>22.<span style="white-space:pre"> </span>A letra K como modificador é uma opção do usuário para designar uma estação
+    de controle, enquanto a letra C seguinte é usada para descrever controlador automático ou manual.</p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p>A figura a seguir, mostra a descrição simbólica completa de um processo de destilação.&nbsp;</p>
+<p>&nbsp;</p>
+<p>A vazão de alimentação é medida (FE-3, FT-3) e registrada (FR-3), mas não controlada A taxa de entrada de calor é
+    proporcional à taxa de alimentação vezes um ganho de relé (FY-3B), que ajusta o ponto de ajuste do controlador de
+    vazão do óleo quente (FRC-1).</p>
+<p>O produto leve da torre é condensado, com a temperatura do condensado controlada mantendo-se constante a pressão da
+    coluna (PRC-11). A saída do produto leve tem vazão controlada (FRC-4). O ponto de ajuste do controlador é ajustado
+    por um relé divisor (UY-6), cujas entradas são a vazão de alimentação, como modificada pelo relé função (FY-3A) e a
+    saída do controlador de análise dos produtos leves (ARC-5).</p>
+<p>O controlador de análise recebe a análise do produto de seu transmissor, que também transmite o sinal para uma chave
+    de análise dual (alta/baixa), que por sua vez, atua em alarmes correspondentes.</p>
+<p>O nível do acumulador é mantido constante (LIC-7) através da manipulação da vazão de refluxo (LV-7), que é uma
+    válvula com falha aberta (FO). Uma chave de nível separada atua um alarme de nível do acumulador em alta e baixa
+    (LSH/L 9).</p>
+<p>Há uma indicação de nível local através de visor (LG 10). São medidas temperaturas em vários pontos do processo e os
+    valores são registrados (6 pontos – TJR 8-1 a 8-6) e indicados (3 pontos - TJI 9-1 a 9-3). Alguns dos pontos de
+    registro possuem chaves de acionamento de temperatura baixa e alta (por exemplo: TJSH 8-2, TAH 8-2 e TJSL 9-5 e TAL
+    8-5), com respectivos alarmes.</p>
+<p>A figura a seguir mostra o sistema de controle para um reator químico. O reagente A é alimentado com vazão controlada
+    (FC-1). As vazões de A e B são controladas com razão constante, através do relé de ganho (FY-1), ajustando o ponto
+    de ajuste do controlador de vazão B (FIC-2). O nível do reator é mantido constante (LIC-3) modulando a saída dos
+    produtos pesados (LC-3).&nbsp;</p>
+<p>&nbsp;</p>
+<p>Se o nível é alto, ele automaticamente fecha as válvulas de alimentação dos reagentes (FV-1 e FV-2) através de
+    válvulas solenóides (UY-7A e UY-7B) e atua um alarme de nível alto (LSH-3 e LAH-3). Um alarme separado é atuado por
+    nível baixo do reator (LSL-3 e LAL3).&nbsp;</p>
+<p>A reação é exotérmica e a temperatura é controlada (T4) modulando a pressão do refrigerante na jaqueta do reator.
+    Isto é feito pelo controlador de temperatura do reator ajustando o ponto de ajuste do controlador de pressão da
+    jaqueta (PRC-5), que controla a pressão do vapor gerado pela transferência de calor para a água de refrigeração. A
+    temperatura do reator, se alta, atua um alarme.&nbsp;</p>
+<p>Se a temperatura fica muito alta, ela fecha as válvulas de alimentação A (FV-1) e B (FV-2) e a de pressão (PV-5),
+    enquanto abre a alimentação d'água e as válvulas de retorno através de válvulas piloto solenóides de intertravamento
+    (UY-7A, B, C, D). Estas válvulas de alta temperatura podem também ser atuadas por uma chave manual (HS-6).</p>
+<p>Um nível constante do refrigerante é mantido na jaqueta modulando a alimentação de água e o nível baixo da jaqueta
+    atua um alarme (LSL-11 e LAL-11). A pressão do reator é controlada modulando o venting dos não condensáveis formados
+    na reação enquanto um disco de ruptura protege o reator contra altas pressões perigosas (PSE-10).</p>
+<p>Resumo</p>
+<p>Nesta aula você conheceu os tipos de sistemas de controle existentes além da integração entre instrumentação e
+    automação industrial. Entendeu também o funcionamento de uma malha de controle, e aprendeu a simbologia utilizada na
+    instrumentação e automação industrial.</p>
+<p><br></p>
+<div><br></div>

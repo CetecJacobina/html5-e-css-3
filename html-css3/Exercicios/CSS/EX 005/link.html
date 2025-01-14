@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo -Elementos</title>
+    <style>
+        body{
+            padding: 10%;
+        }
+
+        a{
+            color: red;
+
+        }
+        a:hover{
+            color: blue;
+           
+        }
+        a:active::after{
+            
+            content: " ⚡ ";
+            color: white;
+        }
+        
+       
+
+    </style>
+</head>
+<body>
+    <h1>Pseudo-Elementos</h1>
+    <ul>
+        <li><a href="">Meu link 1</a></li>
+        <li><a href="">Meu link 2</a></li>
+        <li><a href="">Meu link 3</a></li>
+    </ul>
+    
+</body>
+</html>
