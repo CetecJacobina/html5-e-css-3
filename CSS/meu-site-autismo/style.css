@@ -21,11 +21,15 @@
 
 body{
     background-color: var(--azul2);
+    margin: auto;
+    
 }
 
 header{
     
     height: 100px;
+    background-image: url("imagens/quebra.png");
+    background-size: 200px;
     
     
 }
@@ -63,9 +67,11 @@ nav{
     background-color: var(--azul);
 }
 main{
-    margin: auto;
+    
     background-color: white;
-    max-width: 800px;
-    margin: 0px 10px;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+
 
 }
