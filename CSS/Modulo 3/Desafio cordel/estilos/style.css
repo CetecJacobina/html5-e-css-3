@@ -36,26 +36,54 @@ header a:hover{
     text-decoration: underline;
 }
 main{
-    max-width: 500px;
+    max-width: 1000px;
     background-color: white;
     margin: auto;
-    padding-top: 150px;
+    padding: 10px;
+    padding-top: 100px;
+
+
+
 }
 section{
-    padding: 10vh 0;
+    padding: 5vh 0;
+    border-radius: 4px;
+
+
+
 }
 section p{
+    padding: 10px;
     font-family: conteudo, sans-serif;
-    margin-left: 50px;
-    margin-bottom: 20px;
     line-height: 2em;
+    font-size: 3vw;
+    margin: 20px 0;
+    margin-left: 50px;
 }
+
+
 .imagem{
     background-color: rgba(0, 0, 0, 0.315);
     color: white;
+    background-size: cover;
+    background-position: right center;
+    background-attachment: fixed;
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.514);
 
+}
+section.imagem >p{
+    border-radius: 5px;    
+    background-color: rgba(0, 0, 0, 0.596);
+    display: inline-block;
 }
 .normal{
     background-color: white;
+}
+#img01{
+    background-image: url(../imagens/background001.jpg);
+}
+
+#img02{
+    background-image: url(../imagens/background002.jpg);
 }
 

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-family:  sans-serif;
+        }
+        table{
+            border: 1px solid black;
+            width: 400px;
+            height: 400px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid black;
+            min-width: 150px;
+            vertical-align: top;
+        }
+        th{
+            display: inline;
+            text-align: center;
+            width: 400px;
+            background-color: azure;
+        }
+        .item{
+            background-color: lightgreen;
+        }
+        .valor::before{
+            content: "R$ ";
+
+        }
+      
+    </style>
+
+    <title>Tabelas</title>
+</head>
+<body>
+    <h1>Criando Tabelas</h1>
+    <table>
+        <thead>
+            <th>Preço das frutas</th>
+        </thead>
+        <tr>
+            <td>Item</td>
+            <td>Janeiro</td>
+            <td>Fevereiro</td>
+            <td>Março</td>
+        </tr>
+        <tr>
+            <td class="item">Maçã</td>
+            <td class="valor">5.10</td>
+            <td class="valor">5,50</td>
+            <td class="valor">4,90</td>
+        </tr>
+        <tr>
+            <td class="item">Laranja</td>
+            <td class="valor">3.90</td>
+            <td class="valor">2,50</td>
+            <td class="valor">3,90</td>
+        </tr>
+        <tr>
+            <td class="item">Melão</td>
+            <td class="valor">5.90</td>
+            <td class="valor">6,80</td>
+            <td class="valor">6,60</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+    
+</body>
+</html>
